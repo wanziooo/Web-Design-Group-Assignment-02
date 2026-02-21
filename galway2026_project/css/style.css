@@ -1,0 +1,212 @@
+
+body{
+  margin:0;
+  font-family:Segoe UI, sans-serif;
+  background:linear-gradient(135deg,#1a0f3c,#2e1065);
+  color:white;
+}
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  padding:20px 60px;
+  background:rgba(0,0,0,0.3);
+}
+.navbar a{
+  color:white;
+  text-decoration:none;
+  margin-left:20px;
+}
+.navbar a:hover{color:#f72585;}
+.badge{
+  background:#f72585;
+  padding:3px 8px;
+  border-radius:20px;
+  font-size:12px;
+}
+.hero{
+  height:70vh;
+  background:url('../images/hero.jpg') center/cover no-repeat;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+.hero h1{font-size:48px;}
+.section{padding:60px;}
+.event-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+.event-card{
+  background:linear-gradient(145deg,#2e1065,#3a0ca3);
+  border-radius:20px;
+  overflow:hidden;
+  transition:0.4s;
+}
+.event-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.5);
+}
+.event-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+.event-content h3{
+  font-size:24px;
+  margin-bottom:15px;
+}
+
+.event-content p{
+  font-size:16px;
+  opacity:0.9;
+  margin-bottom:25px;
+}
+.btn{
+  display:inline-block;
+  margin-top:10px;
+  padding:12px 30px;
+}
+
+
+
+.btn{
+  display:inline-block;
+  margin-top:15px;
+  padding:12px 25px;
+  border-radius:25px;
+  background:linear-gradient(90deg,#7209b7,#f72585);
+  color:white;
+  text-decoration:none;
+  border:none;
+}
+.cart-container{
+  padding:60px;
+  display:flex;
+  gap:40px;
+}
+.cart-box{
+  flex:1;
+  background:#2e1065;
+  padding:30px;
+  border-radius:15px;
+}
+form{
+  display:flex;
+  flex-direction:column;
+  width:400px;
+}
+input{
+  padding:10px;
+  margin-bottom:15px;
+  border-radius:8px;
+  border:none;
+}
+@media(max-width:1024px){
+  .event-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:768px){
+  .event-grid{grid-template-columns:1fr;}
+  .navbar{flex-direction:column;}
+  .cart-container{flex-direction:column;}
+}
+/* 子导航 */
+.sub-nav{
+  display:flex;
+  gap:30px;
+  margin:30px 0;
+}
+
+.sub-nav a{
+  padding:10px 25px;
+  border-radius:25px;
+  text-decoration:none;
+  color:white;
+  background:#2e1065;
+  transition:0.3s;
+}
+
+.sub-nav a:hover{
+  background:linear-gradient(90deg,#7209b7,#f72585);
+}
+
+/* 默认隐藏所有分类 */
+.event-category{
+  display:none;
+}
+
+/* 默认显示第一个 */
+#music{
+  display:block;
+}
+
+/* 点击锚点显示对应内容 */
+#music:target,
+#theatre:target,
+#dance:target{
+  display:block;
+}
+
+/* 当target存在时隐藏默认 */
+body:has(.event-category:target) #music{
+  display:none;
+}
+
+/* 隐藏 radio */
+input[type="radio"]{
+  display:none;
+}
+
+/* 子导航样式 */
+.sub-nav{
+  display:flex;
+  gap:30px;
+  margin:30px 0;
+}
+
+.sub-nav label{
+  padding:12px 30px;
+  border-radius:30px;
+  background:#2e1065;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+/* hover */
+.sub-nav label:hover{
+  background:linear-gradient(90deg,#7209b7,#f72585);
+}
+
+/* 选中状态 */
+#music:checked ~ .sub-nav label[for="music"],
+#theatre:checked ~ .sub-nav label[for="theatre"],
+#dance:checked ~ .sub-nav label[for="dance"]{
+  background:linear-gradient(90deg,#7209b7,#f72585);
+}
+
+/* 默认隐藏内容 */
+.content{
+  display:none;
+}
+
+input[type="radio"]{
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+/* 根据选中显示内容 */
+#music:checked ~ .music-content{
+  display:block;
+}
+
+#theatre:checked ~ .theatre-content{
+  display:block;
+}
+
+#dance:checked ~ .dance-content{
+  display:block;
+}
+
