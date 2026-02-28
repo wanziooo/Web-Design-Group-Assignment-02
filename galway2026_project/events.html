@@ -1,101 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Events - GAF 2026</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Events - GAF 2026</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-<header class="navbar">
-<div class="logo">GAF 2026</div>
-<nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="events.html" class="active">Events</a>
-<a href="cart.html">Cart <span class="badge" id="cart-count">0</span></a>
-<a href="support.html">Support</a>
-<a href="profile.html">Profile</a>
-</nav>
-</header>
+  <header class="navbar">
+    <div class="container">
 
-<section class="section">
-<h2>Featured Events</h2>
+      <a href="#" class="logo-link">
+        <div class="logo-circle">G</div>
+        <div class="logo-text">
+          <h1>Galway Arts Festival</h1>
+          <p>Celebrate Creativity</p>
+        </div>
+      </a>
 
-<input type="radio" name="category" id="music" checked>
-<input type="radio" name="category" id="theatre">
-<input type="radio" name="category" id="dance">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#" class="active">Events</a>
+        <a href="workshops.html">Workshops</a>
+        <a href="invest.html">Invest</a>
+        <a href="support.html">Support Us</a>
+        <a href="about.html">About</a>
+      </nav>
 
-<div class="sub-nav">
-<label for="music">Music</label>
-<label for="theatre">Theatre</label>
-<label for="dance">Dance</label>
-</div>
+    </div>
+  </header>
 
-<!-- MUSIC -->
-<div class="content music-content">
-<div class="event-grid">
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Festival Events</h1>
+      <p>
+        Experience world-class art across multiple venues and disciplines
+      </p>
+    </div>
+  </section>
 
-<div class="event-card">
-<img src="images/music1.jpg">
-<div class="event-content">
-<h3>Opening Night Concert</h3>
-<p>15 July 2026</p>
-<a href="event-detail.html?id=opening-night" class="btn">View Details</a>
-</div>
-</div>
 
-<div class="event-card">
-<img src="images/music2.jpg">
-<div class="event-content">
-<h3>Jazz Evening</h3>
-<p>16 July 2026</p>
-<a href="event-detail.html?id=jazz-evening" class="btn">View Details</a>
-</div>
-</div>
+  <section class="category-section">
+    <div class="container">
 
-</div>
-</div>
+      <h2 class="category-title">Browse by Category</h2>
+      <input type="radio" name="filter" id="all" checked>
+      <input type="radio" name="filter" id="arts">
+      <input type="radio" name="filter" id="performance">
+      <input type="radio" name="filter" id="music">
+      <input type="radio" name="filter" id="dance">
+      <div class="category-list">
 
-<!-- THEATRE -->
-<div class="content theatre-content">
-<div class="event-grid">
+        <label for="all" class="tag gray">
+        All Events <span>(6)</span>
+      </label>
 
-<div class="event-card">
-<img src="images/theatre1.jpg">
-<div class="event-content">
-<h3>Theatre Masterpiece</h3>
-<p>18 July 2026</p>
-<a href="event-detail.html?id=theatre-masterpiece" class="btn">View Details</a>
-</div>
-</div>
+      <label for="arts" class="tag blue">Visual Arts<span>(3)</span></label>
+      <label for="performance" class="tag pink">Performance<span>(1)</span></label>
+      <label for="music" class="tag green">Music<span>(1)</span></label>
+      <label for="dance" class="tag orange">Dance<span>(1)</span> </label>
+      </div>
+    <div class="events-grid">
 
-</div>
-</div>
+      <!-- 1 -->
+      <div class="card arts">
+        <div class="image-wrapper">
+          <img src="images/arts1.jpg">
+          <div class="overlay blue"></div>
+          <div class="badge">Visual Arts</div>
+          <div class="icon">🎨</div>
+        </div>
+        <div class="content">
+          <h3>Contemporary Art Exhibition</h3>
+          <p>Featuring works from emerging Irish artists exploring modern themes.</p>
+          <div class="meta">
+            <span>📅 July 15-20, 2026</span>
+            <span>⏰ 10:00 AM – 6:00 PM</span>
+            <span>📍 Galway City Museum</span>
+          </div>
+          <a href="event-1art-exhibition.html" class="learn-btn">Learn More</a>
+        </div>
+      </div>
 
-<!-- DANCE -->
-<div class="content dance-content">
-<div class="event-grid">
+      <!-- 2 -->
+      <div class="card arts">
+        <div class="image-wrapper">
+          <img src="images/arts2.jpg">
+            <div class="overlay purple"></div>
+            <div class="badge">Visual Arts</div>
+            <div class="icon">🎨</div>
+        </div>
+        <div class="content">
+          <h3>Public Art Installations</h3>
+          <p>Outdoor sculptures and interactive installations citywide.</p>
+            <div class="meta">
+              <span>📅 July 15-30, 2026</span>
+              <span>⏰ 24/7</span>
+              <span>📍 Citywide</span>
+            </div>
+          <a href="event-2public-installations.html" class="learn-btn">Learn More</a>
+        </div>
+      </div>
 
-<div class="event-card">
-<img src="images/dance1.jpg">
-<div class="event-content">
-<h3>Contemporary Dance</h3>
-<p>20 July 2026</p>
-<a href="event-detail.html?id=contemporary-dance" class="btn">View Details</a>
-</div>
-</div>
+      <!-- 3 -->
+      <div class="card arts">
+        <div class="image-wrapper">
+          <img src="images/arts3.jpg">
+          <div class="overlay blue"></div>
+          <div class="badge">Visual Arts</div>
+          <div class="icon">🎨</div>
+        </div>
+        <div class="content">
+          <h3>Modern Sculpture Showcase</h3>
+          <p>Exploring contemporary sculpture practices.</p>
+          <div class="meta">
+            <span>📅 July 18-22, 2026</span>
+            <span>⏰ 11:00 AM – 5:00 PM</span>
+            <span>📍 Art Gallery</span>
+          </div>
+          <a href="event-3sculpture-showcase.html" class="learn-btn">Learn More</a>
+        </div>
+      </div>
 
-</div>
-</div>
+      <!-- 4 -->
+      <div class="card performance">
+        <div class="image-wrapper">
+        <img src="images/performance.jpg">
+        <div class="overlay pink"></div>
+        <div class="badge">Performance</div>
+        <div class="icon">🎭</div>
+        </div>
+        <div class="content">
+          <h3>Street Theatre Festival</h3>
+          <p>International street performers bring magic and drama.</p>
+            <div class="meta">
+            <span>📅 July 16-18, 2026</span>
+            <span>⏰ 2:00 PM – 8:00 PM</span>
+            <span>📍 Eyre Square</span>
+            </div>
+          <a href="event-4street-theatre.html" class="learn-btn">Learn More</a>
+        
+        </div>
+      </div>
 
+      <!-- 5 -->
+      <div class="card music">
+        <div class="image-wrapper">
+          <img src="images/music.jpg">
+          <div class="overlay green"></div>
+          <div class="badge">Music</div>
+          <div class="icon">🎵</div>
+        </div>
+        <div class="content">
+          <h3>Music in the Park</h3>
+          <p>Live performances featuring Irish and indie music.</p>
+          <div class="meta">
+            <span>📅 July 20-22, 2026</span>
+            <span>⏰ 6:00 PM – 10:00 PM</span>
+            <span>📍 Salthill Park</span>
+          </div>
+          <a href="event-5music-park.html" class="learn-btn">Learn More</a>
+        
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="card dance">
+        <div class="image-wrapper">
+          <img src="images/dance1.jpg">
+          <div class="overlay orange"></div>
+          <div class="badge">Dance</div>
+          <div class="icon">💃</div>
+        </div>
+        <div class="content">
+          <h3>Contemporary Dance Showcase</h3>
+          <p>Innovative choreography from Irish companies.</p>
+          <div class="meta">
+            <span>📅 July 17-19, 2026</span>
+            <span>⏰ 7:30 PM – 9:30 PM</span>
+            <span>📍 Town Hall Theatre</span>
+          </div>
+          <a href="event-6dance-showcase.html" class="learn-btn">Learn More</a>
+        </div>
+      </div>
+    </div>
+   
+  </section>
+  <!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="cta-container">
+    <h2>Don't Miss Out</h2>
+    <p>
+      Join our workshops to deepen your engagement with the arts
+    </p>
+    <a href="workshops.html" class="cta-button">
+      Explore Workshops
+    </a>
+  </div>
 </section>
 
-<script>
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
-let count = cart.reduce((sum,item)=> sum + item.quantity ,0);
-document.getElementById("cart-count").innerText = count;
-</script>
 
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+
+    <div class="footer-col">
+      <h3>Galway Arts Festival</h3>
+      <p>Celebrating creativity and artistic excellence in the heart of Ireland.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <p>Events</p>
+      <p>Workshops</p>
+      <p>About</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Get Involved</h4>
+      <p>Invest</p>
+      <p>Volunteer</p>
+      <p>Support Us</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>Galway, Ireland</p>
+      <p>info@galwayartsfestival.ie</p>
+      <p>+353 91 509 700</p>
+    </div>
+    
+
+  </div>
+  <div class="footer-bottom">
+  © 2026 Galway Arts Festival. All rights reserved.
+</div>
+</footer>
 </body>
 </html>
